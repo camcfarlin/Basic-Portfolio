@@ -1,3 +1,7 @@
+/*************************************** 
+GENERAL
+***************************************/
+
 a {
 	text-decoration: none;
 }
@@ -24,6 +28,31 @@ h2 {
 hr {
 	max-width: 98%;
 }
+
+img {
+	max-width: 100%;
+
+}
+
+/*************************************** 
+NAVIGATION
+***************************************/
+nav {
+	text-align: center;
+	padding-right: 10px;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	color: darkgrey;
+}
+
+nav li {
+	display: inline-block;
+}
+
+
 /*************************************** 
 HEADER
 ***************************************/
@@ -34,46 +63,13 @@ header {
 	border-bottom: solid;
 	border-color: #cccccc;
 	border-width: 1px;
+	padding-left: 20px;
 }
+
+/*  Header is too responsive cant make it stay a fixed size */
 
 #top {
-	width: 100%;
-}
-
-/*************************************** 
-BODY
-***************************************/
-body {
-	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-	font-size: 1em;
-	background-image: url('/Users/cesarmcfarlin/Documents/GitHub/Basic-Portfolio/assets/images/light-grey-terrazzo.png');
-	margin: 0 auto 0 auto;
-}
-
-body p {
-	margin: 5px 10px;
-}
-	
-#content {
-	background-color: #ffffff;
-	border-style: solid;
-	border-color: #dddddd;
-	border-width: 1px;
-	max-width: 960px;
-	max-height: 450px;
-	margin: 10px;
-	overflow: auto;
-}
-
-
-#content img {
-	float: left;
-	margin: 5px 10px;
-}
-
-.profile-photo {
-  	max-width: 100px;
-  	border-radius: 5%;
+	margin-left: -20px; /*** For Mobile site only***/
 }
 
 /****************************************
@@ -95,59 +91,55 @@ footer p {
 	color: #ccc;
 	font-size: .74em;
 	text-align: center;
-}
-
-/*************************************** 
-NAVIGATION
-***************************************/
-nav {
-	text-align: center;
-}
-
-nav ul {
-	list-style: none;
-	padding: 0;
-	color: darkgrey;
-}
-
-nav li {
-	display: inline-block;
+	clear: both;
 }
 
 
 /*************************************** 
-FORM
+PAGE: ABOUT
 ***************************************/
-form {
-	line-height: 1.3;
-	margin-left: 1em;
+body {
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 1em;
+	background-image: url('/Users/cesarmcfarlin/Documents/GitHub/Basic-Portfolio/assets/images/light-grey-terrazzo.png');
+	margin: 0 auto;
+	padding-bottom: 50px;
 }
 
-input {
-	width: 98%;
+body p {
+	margin: 5px 10px;
+}
+	
+#content {
+	background-color: #ffffff;
+	border-style: solid;
+	border-color: #dddddd;
+	border-width: 1px;
+	max-width: 960px;
+	margin: 10px;
+	overflow: scroll;
 }
 
-input[name="message"] {
-	height: 100px;
-}
 
-.button {
-	width: 50px;
-   	height: 25px;
-   	color: white;
-	background-color: #4aaaa5;
-	text-align: center;
+.profile-photo {
+	display: block;
+	max-width: 120px;
+  	border-radius: 5%;
+  	clear: right;
+  	margin: 0 auto;
 }
 
 /**********************************
 PAGE: PORTFOLIO
 ***********************************/
 
+/* 	Class 2 x 3 build
+	img wont adjust sise
+	banner and img are off
+*/
+
 #gallery {
-  	margin: 0;
-  	padding: 0;
   	list-style: none;
- 
 }
 
 #gallery li a p {
@@ -166,14 +158,42 @@ PAGE: PORTFOLIO
 #gallery p {
 	position: absolute;
 	bottom: -11px;
-	width: 80%;
-	left: 50%;
+	text-align: center;
+	width: 250px;
 	color: white;
-	transform: translate(-50%, -50%);
-	background-color: #ccc;
+	transform: translate(6%, -47%);
+	background-color: #4aaaa5;
 }
 
 #gallery img {
-	max-width: 150px;
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-left: -25px;
 }
 
+/*************************************** 
+PAGE: CONTACT
+***************************************/
+form {
+	line-height: 1.3;
+	margin-left: 1em;
+}
+
+input {
+	width: 98%;
+}
+/* set text marker to top?*/
+input[name="message"] {
+	height: 100px;
+
+}
+
+.button {
+	width: 70px;
+   	height: 25px;
+   	color: white;
+	background-color: #4aaaa5;
+	text-align: center;
+	border-radius: 15%;
+}
